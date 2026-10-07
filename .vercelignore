@@ -1,0 +1,9 @@
+# Local data and private configuration must never enter a deployment upload.
+.env
+.env.*
+*.db
+*.db-*
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
