@@ -2,6 +2,8 @@
 
 A responsive, private to-do app built with Next.js, TypeScript, and SQLite. Users register with a username and password, then add, complete, and delete only their own tasks.
 
+**Live app:** [full-stack-todo-ecru.vercel.app](https://full-stack-todo-ecru.vercel.app)
+
 ## The three layers
 
 1. **Front end:** `src/app/page.tsx` displays the account form and task list. It calls JSON API routes when the user signs in or changes a task.
