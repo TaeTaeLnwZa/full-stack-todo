@@ -41,7 +41,7 @@ Username rules: 3–24 letters, numbers, or underscores; matching is case-insens
 
 ## Deploy to Vercel
 
-Vercel functions do not provide a persistent writable SQLite file. Use a hosted SQLite-compatible Turso database for the deployed app. Connect the [Turso Cloud Vercel integration](https://vercel.com/marketplace/tursocloud) to the project. It supplies `TURSO_DATABASE_URL` and `TURSO_AUTH_TOKEN` as private environment variables. Run `pnpm db:init` once with those variables to create the tables, then deploy the GitHub repository to Vercel.
+Vercel functions do not provide a persistent writable SQLite file. Use a hosted SQLite-compatible Turso database for the deployed app. Connect the [Turso Cloud Vercel integration](https://vercel.com/marketplace/tursocloud) to the project. It supplies `TURSO_DATABASE_URL` and `TURSO_AUTH_TOKEN` as private environment variables. From a linked Vercel project, run `vercel env run -e production -- pnpm db:init` once to create the tables, then deploy the GitHub repository to Vercel.
 
 Keep `.env` and `.env.local` out of Git. `.env.example` lists variable names only. Production refuses to start without a hosted database URL. No API keys, passwords, or test user data belong in the repository.
 
